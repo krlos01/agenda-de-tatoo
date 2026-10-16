@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Ink - Estúdio de Tatuagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💀Agenda Ink Studio💀</h1>
+            <p>Gerenciamento de Sessões e Clientes</p>
+        </header>
+
+        <main class="grid-container">
+            <!-- Formulário de Agendamento -->
+            <section class="form-section">
+                <h2>Novo Agendamento</h2>
+                <form id="appointment-form">
+                    <div class="form-group">
+                        <label for="client">Nome do Cliente:</label>
+                        <input type="text" id="client" required placeholder="Ex: João Silva">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="artist">Tatuador(a):</label>
+                        <select id="artist" required>
+                            <option value="">Selecione o artista...</option>
+                            <option value="Carlos (Realismo)">Carlos (Realismo)</option>
+                            <option value="Paula (Piercing)">Paula (Piercing)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="style">Estilo/Ideia da Tattoo:</label>
+                        <input type="text" id="style" required placeholder="Ex: Caveira Old School, Leão Antebraço">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Data:</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Horário:</label>
+                            <input type="time" id="time" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Confirmar Sessão</button>
+                </form>
+            </section>
+
+            <!-- Lista de Horários Marcados -->
+            <section class="list-section">
+                <h2>Sessões Agendadas (<span id="total-sessions">0</span>)</h2>
+                <div id="appointments-list" class="appointments-list">
+                    <!-- Os agendamentos via JS entram aqui -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
